@@ -1,0 +1,33 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { position: relative; background-image: url(../images/black-blank-board.jpg); background-position: center; background-size: cover; height: 100vh; font-family: 'Open Sans', sans-serif; }
+
+body h1 { margin-left: 10px; color: #fff; }
+
+body .board { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); max-width: 1200px; height: 80vh; border-radius: 10px; padding: 20px; text-align: center; }
+
+body .create-column { position: relative; color: #fff; background-color: #D27855; border: 2px solid #000; border-radius: 4px; width: 150px; line-height: 40px; margin-top: 20px; margin-left: 10px; overflow: hidden; font-weight: 600; cursor: pointer; }
+
+body .create-column:hover { color: #fff; background-color: #D27855; }
+
+body .create-column:hover:before { transform: skewX(-45deg) translateX(250px); transition: all 0.4s ease-in; }
+
+body .create-column:before { content: ""; display: block; position: absolute; background-color: rgba(255, 255, 255, 0.5); height: 100%; width: 40px; top: 0; left: -70px; transform: skewX(-45deg) translateX(0px); transition: none; }
+
+body .column-container { display: flex; justify-content: flex-start; align-items: stretch; }
+
+body .column { position: relative; display: flex; justify-content: space-between; flex-direction: column; align-items: center; height: 55vh; margin: 50px 10px; border: 1px solid #8d8888; border-radius: 4px; cursor: pointer; box-shadow: 2px 2px 4px #000; }
+
+body .column .column-title { color: #fff; text-align: center; margin-top: 5px; text-transform: uppercase; padding: 5px 15px; font-weight: 500; }
+
+body .column .column-card-list { list-style: none; padding: 10px; margin: 10px; border-radius: 4px; min-width: 150px; }
+
+body .column .btn-delete { position: absolute; top: 16px; right: 10px; color: #fff; background-color: transparent; border-radius: 50%; border: none; width: 20px; height: 20px; font-size: 16px; line-height: 15px; cursor: pointer; }
+
+body .column .add-card { display: block; color: #000; background-color: #fff; border: none; border-radius: 4px; width: 80px; height: 30px; margin-bottom: 10px; cursor: pointer; }
+
+body .card { position: relative; background: linear-gradient(to left bottom, transparent 50%, rgba(0, 0, 0, 0.5) 0) no-repeat 100% 0/1em 1em, linear-gradient(-135deg, transparent 0.7em, #fff 0); padding: 20px; border-radius: 4px; margin: 20px 0px; }
+
+body .card .card-description { color: #000; padding: 0px 15px; }
+
+body .card .btn-delete { position: absolute; display: block; top: 5px; left: 5px; color: #fff; background-color: #000; }
