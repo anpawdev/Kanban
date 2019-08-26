@@ -1,20 +1,18 @@
 'use strict'
 
+var prefix = "https://cors-anywhere.herokuapp.com/";
 var baseUrl = 'https://kodilla.com/pl/bootcamp-api';
 var myHeaders = {
   'X-Client-Id': '4336',
   'X-Auth-Token': '4fc5defc6a0b7c4692c4bdfbdd2c5a60'
 };
 
-fetch(baseUrl + '/board', { headers: myHeaders })
+fetch(prefix + baseUrl + '/board', { headers: myHeaders })
 	.then(function(resp) {
     	return resp.json();
   	})
   	.then(function(resp) {
 		setupColumns(resp.columns);
-	})
-	.catch(function(error) {
-		console.log(error);
 	});
 
 //Create columns

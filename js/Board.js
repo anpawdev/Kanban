@@ -4,7 +4,7 @@ var board = {
     name: 'Tablica Kanban',
     addColumn: function(column) {
       this.element.appendChild(column.element);
-      initSortable(column.id); //About this feature we will tell later
+      initSortable(column.id); 
     },
     element: document.querySelector('#board .column-container')
 };
@@ -15,7 +15,7 @@ document.querySelector('#board .create-column').addEventListener('click', functi
   
     data.append('name', name);
   
-    fetch(baseUrl + '/column', {
+    fetch(prefix + baseUrl + '/column', {
         method: 'POST',
         headers: myHeaders,
         body: data,
